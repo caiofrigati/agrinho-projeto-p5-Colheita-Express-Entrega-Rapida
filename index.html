@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão Campo-Cidade</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Painel de informações -->
+        <div class="info-panel">
+            <div class="info-item">⏱️ <span id="time">60</span>s</div>
+            <div class="info-item">💰 <span id="score">0</span></div>
+            <div class="info-item">🚚 <span id="deliveries">0</span>/10</div>
+        </div>
+        
+        <!-- Tela de início -->
+        <div id="start-screen" class="screen">
+            <div class="title">CONEXÃO CAMPO-CIDADE</div>
+            <div class="subtitle">Transporte produtos do campo para a cidade e fortaleça essa união!</div>
+            <button class="btn" id="start-btn">COMEÇAR A JOGAR</button>
+            <div class="subtitle" style="font-size:16px; margin-top:20px;">
+                Use as teclas ← → para mover o caminhão<br>
+                Pressione ESPAÇO para coletar produtos e fazer entregas
+            </div>
+        </div>
+        
+        <!-- Tela de vitória -->
+        <div id="win-screen" class="screen hidden">
+            <div class="title">PARABÉNS! 🎉</div>
+            <div class="subtitle">Você fortaleceu a conexão entre o campo e a cidade!</div>
+            <div class="subtitle" id="final-score" style="font-size:24px; margin:15px 0;">Pontuação: 0</div>
+            <button class="btn" id="restart-btn">JOGAR NOVAMENTE</button>
+        </div>
+        
+        <!-- Legenda dos produtos -->
+        <div class="product-legend" id="product-legend"></div>
+        
+        <!-- Instruções durante o jogo -->
+        <div class="instructions">
+            Use ← → para mover | ESPAÇO para coletar/entregar
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
